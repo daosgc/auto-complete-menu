@@ -1,31 +1,16 @@
-'use strict';
-
 import appStyles from '../sass/app.scss';
 import angular from 'angular';
 
-var app = angular.module('app', ['app.directives', 'app.services']);
+(function () {
+	'use strict';
+	angular.module('app', [
+		'app.controllers',
+		'app.services',
+		'app.directives'
+	]);
 
-//init modules
-angular.module('app.directives', []);
-angular.module('app.services', []);
-
-app.controller('PrincipalCtrl', function(StateService) {
-	var vm = this;
-	vm.tittlePage = 'Autocomplete Component';
-	vm.autoCompleteOptions = {
-		label: 'States of EEUU',
-		callbacks: {
-			onSelectItem: onSelectItem,
-			onClearItem: onClearItem
-
-		}
-	};
-
-	function onSelectItem(item){
-		vm.itemSelected = item;
-	}
-
-	function onClearItem(){
-		vm.itemSelected = null;
-	}
-})
+	//init modules
+	angular.module('app.controllers', []);
+	angular.module('app.directives', []);
+	angular.module('app.services', []);
+})();

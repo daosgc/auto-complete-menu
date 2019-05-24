@@ -4,19 +4,18 @@
 	<title>Verndale Javascript Code Test</title>
 </head>
 <body ng-app="app">
-	<div id="app" ng-controller="PrincipalCtrl as ctrl">
-		<h2 class="general-title">{{::ctrl.tittlePage}}</h2>
+	<div id="app" ng-controller="HomeCtrl as vmHome">
+		<h2 class="general-title">{{::vmHome.titlePage}}</h2>
 		<!-- Autocomplete component -->
 		<div class="principal-container">
-			<auto-complete-menu class="auto-complete" options="ctrl.autoCompleteOptions"></auto-complete-menu>
+			<auto-complete-menu class="auto-complete" options="vmHome.autoCompleteOptions"></auto-complete-menu>
 		</div>
 
-		<div class="container-result" ng-if="ctrl.itemSelected">
+		<div class="container-result" ng-if="vmHome.itemSelected">
 			<span>You have selected this option</span>
-			<div class="obj-result">{{ctrl.itemSelected}}</div>
+			<div class="obj-result">{{vmHome.itemSelected}}</div>
 		</div>
 	</div>
-
 	<script src='../dist/main-bundle.js'></script>
 </body>
 </html>

@@ -20,8 +20,7 @@
 
 	function autoCompleteMenuController(StateService) {
 		var vmAutoCompleteMenu = this,
-			startingSearch,
-			suggestionsNumber;
+			startingSearch;
 
 		function init() {
 			vmAutoCompleteMenu.options = vmAutoCompleteMenu.options || {};
@@ -37,7 +36,6 @@
 			vmAutoCompleteMenu.onClearSearch = onClearSearch
 			vmAutoCompleteMenu.onClickItem = onClickItem;
 			startingSearch = vmAutoCompleteMenu.options.startingSearch || 2;
-			suggestionsNumber = vmAutoCompleteMenu.options.suggestionsNumber || 5;
 		}
 
 		init();
