@@ -1,0 +1,62 @@
+.auto-complete-container {
+
+	.label {
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.input-container {
+		position: relative;
+
+		.search-container{
+			position: relative;
+			width: 100%;
+
+			.input-search {
+				width: 100%;
+				border-radius: 0.5rem;
+				border: 1px solid $light-gray;
+				padding: 0.6rem;
+			}
+
+			.clear-button {
+				height: 1.5rem;
+				width: 1.5rem;
+				background: #cccccc;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				position: absolute;
+				right: 1%;
+				top: 50%;
+				transform: translate(-1%, -50%);
+			}
+		}
+
+		.autocomplete-dropdown {
+			border: 1px solid $light-gray;
+			border-top: none;
+			border-bottom-left-radius: 0.5rem;
+			border-bottom-right-radius: 0.5rem;
+			padding-top: 1%;
+			position: absolute;
+			top: 85%;
+			width: 99.5%;
+			height: 9rem;
+    		overflow: scroll;
+
+			.field-item {
+				padding: 0.4rem;
+
+				&.active-item {
+					cursor: pointer;
+					background: $light-blue;
+				}
+			}
+		}
+
+
+	}
+}

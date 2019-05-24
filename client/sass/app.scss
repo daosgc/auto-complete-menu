@@ -1,7 +1,26 @@
 @import "reset";
+@import "colors";
+@import "../js/directives/auto-complete-menu/auto-complete-menu";
 
 body,
 html {
 	font-weight: normal;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.general-title {
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.principal-container {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+
+	.auto-complete {
+		width: 25%;
+	}
 }

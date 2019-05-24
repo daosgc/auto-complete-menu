@@ -3,10 +3,13 @@
 	<meta charset="UTF-8">
 	<title>Verndale Javascript Code Test</title>
 </head>
-<body>
-	<div id="app">
+<body ng-app="app">
+	<div id="app" ng-controller="PrincipalCtrl as ctrl">
+		<h2 class="general-title">{{::ctrl.tittlePage}}</h2>
 		<!-- Autocomplete component -->
-
+		<div class="principal-container">
+			<auto-complete-menu class="auto-complete" options="ctrl.autoCompleteOptions"></auto-complete-menu>
+		</div>
 	</div>
 
 	<script src='../dist/main-bundle.js'></script>

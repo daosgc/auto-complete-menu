@@ -1,0 +1,35 @@
+<div class='auto-complete-container'>
+	<span class="label" ng-if='vmAutoCompleteMenu.options.label'>
+		{{::vmAutoCompleteMenu.options.label}}
+	</span>
+	<div class="input-container">
+		<div class="search-container">
+			<input class="input-search"
+				ng-model='vmAutoCompleteMenu.itemSearch'
+				placeholder='{{::vmAutoCompleteMenu.placeholder}}'
+				ng-keydown='vmAutoCompleteMenu.onKeyDown($event)'
+				ng-change='vmAutoCompleteMenu.onSearch()'/>
+			<span class="clear-button"
+				ng-click='vmAutoCompleteMenu.onClearSearch()'
+				ng-if="vmAutoCompleteMenu.itemSearch">
+				X
+			</span>
+		</div>
+
+		<ul id='container-autocomplete'
+			ng-show='vmAutoCompleteMenu.filteredFields.length'
+			class='autocomplete-dropdown'>
+			<li class='field-item'
+				ng-class='{ "active-item": ($index == vmAutoCompleteMenu.activeField) }'
+				ng-repeat='field in vmAutoCompleteMenu.filteredFields'
+				ng-click='vmAutoCompleteMenu.onClickField(field)'
+				ng-mouseover='vmAutoCompleteMenu.onMouseOver($index)'
+				ng-blur='vmAutoCompleteMenu.onBlurSearch($event)'>
+				{{::field.name}}
+			</li>
+		</ul>
+	</div>
+	<span class='feedback-message' ng-if='vmAutoCompleteMenu.feedbackMessage'>
+		{{::vmAutoCompleteMenu.feedbackMessage}}
+	</span>
+</div>
