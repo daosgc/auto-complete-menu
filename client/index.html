@@ -10,6 +10,11 @@
 		<div class="principal-container">
 			<auto-complete-menu class="auto-complete" options="ctrl.autoCompleteOptions"></auto-complete-menu>
 		</div>
+
+		<div class="container-result" ng-if="ctrl.itemSelected">
+			<span>You have selected this option</span>
+			<div class="obj-result">{{ctrl.itemSelected}}</div>
+		</div>
 	</div>
 
 	<script src='../dist/main-bundle.js'></script>

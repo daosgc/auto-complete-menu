@@ -13,6 +13,19 @@ app.controller('PrincipalCtrl', function(StateService) {
 	var vm = this;
 	vm.tittlePage = 'Autocomplete Component';
 	vm.autoCompleteOptions = {
-		label: 'States of EEUU'
+		label: 'States of EEUU',
+		callbacks: {
+			onSelectItem: onSelectItem,
+			onClearItem: onClearItem
+
+		}
 	};
+
+	function onSelectItem(item){
+		vm.itemSelected = item;
+	}
+
+	function onClearItem(){
+		vm.itemSelected = null;
+	}
 })

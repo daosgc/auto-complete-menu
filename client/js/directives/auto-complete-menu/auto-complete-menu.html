@@ -17,15 +17,15 @@
 		</div>
 
 		<ul id='container-autocomplete'
-			ng-show='vmAutoCompleteMenu.filteredFields.length'
+			ng-show='vmAutoCompleteMenu.filteredItems.length'
 			class='autocomplete-dropdown'>
-			<li class='field-item'
-				ng-class='{ "active-item": ($index == vmAutoCompleteMenu.activeField) }'
-				ng-repeat='field in vmAutoCompleteMenu.filteredFields'
-				ng-click='vmAutoCompleteMenu.onClickField(field)'
+			<li class='item-suggestion'
+				ng-class='{ "active-item": ($index == vmAutoCompleteMenu.activeItem) }'
+				ng-repeat='item in vmAutoCompleteMenu.filteredItems'
+				ng-click='vmAutoCompleteMenu.onClickItem(item)'
 				ng-mouseover='vmAutoCompleteMenu.onMouseOver($index)'
 				ng-blur='vmAutoCompleteMenu.onBlurSearch($event)'>
-				{{::field.name}}
+				{{::item.name}}
 			</li>
 		</ul>
 	</div>
