@@ -98,6 +98,7 @@
 			if (action === 'up') {
 				if ((vmAutoCompleteMenu.activeField - 1) % len > -1) {
 					vmAutoCompleteMenu.activeField = (vmAutoCompleteMenu.activeField - 1) % len;
+					document.querySelector('#container-autocomplete').scrollTop = 29*vmAutoCompleteMenu.activeField;
 					vmAutoCompleteMenu.onSelectField(vmAutoCompleteMenu.filteredFields[vmAutoCompleteMenu.activeField]);
 				}
 			} else if (action === 'down') {
@@ -106,6 +107,7 @@
 					vmAutoCompleteMenu.onSelectField(vmAutoCompleteMenu.filteredFields[vmAutoCompleteMenu.activeField]);
 				} else if (((vmAutoCompleteMenu.activeField + 1) % len)) {
 					vmAutoCompleteMenu.activeField = (vmAutoCompleteMenu.activeField + 1) % len;
+					document.querySelector('#container-autocomplete').scrollTop = 29*vmAutoCompleteMenu.activeField;
 					vmAutoCompleteMenu.onSelectField(vmAutoCompleteMenu.filteredFields[vmAutoCompleteMenu.activeField]);
 				}
 			} else if (action === 'select') {
