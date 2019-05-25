@@ -4,13 +4,15 @@
 	"description": "Verndale Code Test - Vanilla JS",
 	"private": true,
 	"scripts": {
-		"start": "webpack"
-	  },
+		"start": "webpack",
+		"test": "karma start"
+	},
 	"dependencies": {
 		"express": "^4.13.4"
 	},
 	"devDependencies": {
 		"angular": "^1.6.9",
+		"angular-mocks": "^1.7.8",
 		"babel-core": "~6.9.0",
 		"babel-loader": "^6.2.4",
 		"babel-plugin-transform-class-properties": "^6.10.2",
@@ -20,6 +22,9 @@
 		"babel-register": "^6.9.0",
 		"css-loader": "~0.25.0",
 		"html-loader": "^0.5.5",
+		"karma": "^4.1.0",
+		"karma-jasmine": "^2.0.1",
+		"karma-phantomjs-launcher": "^1.0.4",
 		"node-sass": "^3.9.3",
 		"sass-loader": "^4.0.2",
 		"style-loader": "~0.13.1",
